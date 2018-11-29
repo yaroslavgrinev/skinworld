@@ -1,0 +1,8 @@
+@import '../../styles.scss';
+
+@include register-component {
+  .test-theme-nested {
+    background: from-theme(background);
+    color: from-theme(color);
+  }
+}

@@ -1,0 +1,7 @@
+@import './partials/functions';
+@import './partials/mixins';
+@import './partials/themes';
+
+body {
+  font-size: from-theme(font-size, 'common');
+}

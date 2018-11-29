@@ -1,0 +1,19 @@
+@mixin register-themes($themes) {
+  $themes: $themes !global;
+}
+
+@mixin register-global-styles() {
+  *[class^="sw-theme-"] {
+    @content;
+  }
+}
+
+@mixin register-component() {
+  @each $theme-name, $theme in $themes{
+    @debug $theme-name;
+    .sw-theme-#{$theme-name} :host {
+      $theme: set-theme($theme, $theme-name);
+      @content;
+    }
+  }
+}

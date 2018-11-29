@@ -1,0 +1,8 @@
+@import '../styles.scss';
+
+@include register-component() {
+  .test-theme {
+    color: from-theme(color);
+    background: from-theme(background);
+  }
+}

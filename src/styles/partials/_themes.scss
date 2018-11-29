@@ -1,0 +1,19 @@
+$common-theme: (
+  font-size: 22px
+);
+
+$dark-theme: (
+  background: #000,
+  color: #fff
+);
+
+$light-theme: (
+  background: #fff,
+  color: #000
+);
+
+@include register-themes((
+  'light': $light-theme,  
+  'dark': $dark-theme,
+  'common': $common-theme,
+));
